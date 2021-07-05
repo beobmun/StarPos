@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		7A010ADE26934C9D00C1F0D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */; };
 		7A010AE026934C9D00C1F0D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */; };
-		7A010AE226934C9D00C1F0D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AE126934C9D00C1F0D3 /* ViewController.swift */; };
+		7A010AE226934C9D00C1F0D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */; };
 		7A010AE526934C9D00C1F0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A010AE326934C9D00C1F0D3 /* Main.storyboard */; };
 		7A010AE726934C9D00C1F0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A010AE626934C9D00C1F0D3 /* Assets.xcassets */; };
 		7A010AEA26934C9D00C1F0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A010AE826934C9D00C1F0D3 /* LaunchScreen.storyboard */; };
 		7A010AF526934C9D00C1F0D3 /* StarPosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AF426934C9D00C1F0D3 /* StarPosTests.swift */; };
 		7A010B0026934C9D00C1F0D3 /* StarPosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AFF26934C9D00C1F0D3 /* StarPosUITests.swift */; };
+		7A010B0E2693509500C1F0D3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		7A010ADA26934C9D00C1F0D3 /* StarPos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarPos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A010AE126934C9D00C1F0D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A010AE426934C9D00C1F0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A010AE626934C9D00C1F0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A010AE926934C9D00C1F0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		7A010AFB26934C9D00C1F0D3 /* StarPosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarPosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A010AFF26934C9D00C1F0D3 /* StarPosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarPosUITests.swift; sourceTree = "<group>"; };
 		7A010B0126934C9D00C1F0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */,
 				7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */,
-				7A010AE126934C9D00C1F0D3 /* ViewController.swift */,
+				7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */,
+				7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */,
 				7A010AE326934C9D00C1F0D3 /* Main.storyboard */,
 				7A010AE626934C9D00C1F0D3 /* Assets.xcassets */,
 				7A010AE826934C9D00C1F0D3 /* LaunchScreen.storyboard */,
@@ -258,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A010AE226934C9D00C1F0D3 /* ViewController.swift in Sources */,
+				7A010AE226934C9D00C1F0D3 /* LoginViewController.swift in Sources */,
 				7A010ADE26934C9D00C1F0D3 /* AppDelegate.swift in Sources */,
+				7A010B0E2693509500C1F0D3 /* SignUpViewController.swift in Sources */,
 				7A010AE026934C9D00C1F0D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MC64FDHW3N;
 				INFOPLIST_FILE = StarPos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MC64FDHW3N;
 				INFOPLIST_FILE = StarPos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
