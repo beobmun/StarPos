@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A10113A776CB2C7A3CE4F6 /* Pods_StarPosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177448FFAFEF62B4B152C701 /* Pods_StarPosTests.framework */; };
 		7A010ADE26934C9D00C1F0D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */; };
 		7A010AE026934C9D00C1F0D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */; };
 		7A010AE226934C9D00C1F0D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */; };
@@ -16,6 +17,16 @@
 		7A010AF526934C9D00C1F0D3 /* StarPosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AF426934C9D00C1F0D3 /* StarPosTests.swift */; };
 		7A010B0026934C9D00C1F0D3 /* StarPosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010AFF26934C9D00C1F0D3 /* StarPosUITests.swift */; };
 		7A010B0E2693509500C1F0D3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */; };
+		7A010B11269358DC00C1F0D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A010B10269358DC00C1F0D3 /* GoogleService-Info.plist */; };
+		7AE0358B2695651B00ED9B2E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0358A2695651B00ED9B2E /* APIService.swift */; };
+		7AE0358D2695677A00ED9B2E /* JusoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0358C2695677A00ED9B2E /* JusoStore.swift */; };
+		7AE0358F26956D8600ED9B2E /* ViewJuso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0358E26956D8600ED9B2E /* ViewJuso.swift */; };
+		7AE0359126956E6400ED9B2E /* AddrItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE0359026956E6400ED9B2E /* AddrItem.swift */; };
+		7AF49000269498B200B33C40 /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF48FFF269498B200B33C40 /* AddressSearchViewController.swift */; };
+		7AF49003269499D000B33C40 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF49002269499D000B33C40 /* AddressTableViewCell.swift */; };
+		7AF490052694A02400B33C40 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF490042694A02400B33C40 /* AddressViewModel.swift */; };
+		9DAA9CFD78518E51C72A2008 /* Pods_StarPos_StarPosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931477A3189BCC73A888560 /* Pods_StarPos_StarPosUITests.framework */; };
+		BA05E75665567869E1FEF959 /* Pods_StarPos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD725BC288533AA2CDED6D9C /* Pods_StarPos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CE908019D3DA12E3F2D50F3 /* Pods-StarPosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPosTests.debug.xcconfig"; path = "Target Support Files/Pods-StarPosTests/Pods-StarPosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		177448FFAFEF62B4B152C701 /* Pods_StarPosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AFAFBAF29E4E58629FB53F3 /* Pods-StarPos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPos.release.xcconfig"; path = "Target Support Files/Pods-StarPos/Pods-StarPos.release.xcconfig"; sourceTree = "<group>"; };
+		7931477A3189BCC73A888560 /* Pods_StarPos_StarPosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPos_StarPosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CE19F694E69B07CDB93623 /* Pods-StarPos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPos.debug.xcconfig"; path = "Target Support Files/Pods-StarPos/Pods-StarPos.debug.xcconfig"; sourceTree = "<group>"; };
 		7A010ADA26934C9D00C1F0D3 /* StarPos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarPos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +67,18 @@
 		7A010AFF26934C9D00C1F0D3 /* StarPosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarPosUITests.swift; sourceTree = "<group>"; };
 		7A010B0126934C9D00C1F0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7A010B10269358DC00C1F0D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AE0358A2695651B00ED9B2E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7AE0358C2695677A00ED9B2E /* JusoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JusoStore.swift; sourceTree = "<group>"; };
+		7AE0358E26956D8600ED9B2E /* ViewJuso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewJuso.swift; sourceTree = "<group>"; };
+		7AE0359026956E6400ED9B2E /* AddrItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddrItem.swift; sourceTree = "<group>"; };
+		7AF48FFF269498B200B33C40 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
+		7AF49002269499D000B33C40 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		7AF490042694A02400B33C40 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
+		9FF9C8AAE06EB4316EF4F6D1 /* Pods-StarPos-StarPosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPos-StarPosUITests.release.xcconfig"; path = "Target Support Files/Pods-StarPos-StarPosUITests/Pods-StarPos-StarPosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BD725BC288533AA2CDED6D9C /* Pods_StarPos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarPos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1447B81BE566729ED6A9B9B /* Pods-StarPosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPosTests.release.xcconfig"; path = "Target Support Files/Pods-StarPosTests/Pods-StarPosTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB78DDFFEB646B1D2CA57741 /* Pods-StarPos-StarPosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarPos-StarPosUITests.debug.xcconfig"; path = "Target Support Files/Pods-StarPos-StarPosUITests/Pods-StarPos-StarPosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA05E75665567869E1FEF959 /* Pods_StarPos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A10113A776CB2C7A3CE4F6 /* Pods_StarPosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAA9CFD78518E51C72A2008 /* Pods_StarPos_StarPosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A60ECD583019ECFE6B6B310 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79CE19F694E69B07CDB93623 /* Pods-StarPos.debug.xcconfig */,
+				4AFAFBAF29E4E58629FB53F3 /* Pods-StarPos.release.xcconfig */,
+				EB78DDFFEB646B1D2CA57741 /* Pods-StarPos-StarPosUITests.debug.xcconfig */,
+				9FF9C8AAE06EB4316EF4F6D1 /* Pods-StarPos-StarPosUITests.release.xcconfig */,
+				0CE908019D3DA12E3F2D50F3 /* Pods-StarPosTests.debug.xcconfig */,
+				C1447B81BE566729ED6A9B9B /* Pods-StarPosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47E56307CFDF74D414CF78B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD725BC288533AA2CDED6D9C /* Pods_StarPos.framework */,
+				7931477A3189BCC73A888560 /* Pods_StarPos_StarPosUITests.framework */,
+				177448FFAFEF62B4B152C701 /* Pods_StarPosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A010AD126934C9D00C1F0D3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +139,8 @@
 				7A010AF326934C9D00C1F0D3 /* StarPosTests */,
 				7A010AFE26934C9D00C1F0D3 /* StarPosUITests */,
 				7A010ADB26934C9D00C1F0D3 /* Products */,
+				2A60ECD583019ECFE6B6B310 /* Pods */,
+				47E56307CFDF74D414CF78B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +159,12 @@
 			children = (
 				7A010ADD26934C9D00C1F0D3 /* AppDelegate.swift */,
 				7A010ADF26934C9D00C1F0D3 /* SceneDelegate.swift */,
-				7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */,
-				7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */,
+				7A010B0F269353C700C1F0D3 /* Login,SignUp */,
 				7A010AE326934C9D00C1F0D3 /* Main.storyboard */,
 				7A010AE626934C9D00C1F0D3 /* Assets.xcassets */,
 				7A010AE826934C9D00C1F0D3 /* LaunchScreen.storyboard */,
 				7A010AEB26934C9D00C1F0D3 /* Info.plist */,
+				7A010B10269358DC00C1F0D3 /* GoogleService-Info.plist */,
 			);
 			path = StarPos;
 			sourceTree = "<group>";
@@ -131,6 +187,30 @@
 			path = StarPosUITests;
 			sourceTree = "<group>";
 		};
+		7A010B0F269353C700C1F0D3 /* Login,SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				7A010AE126934C9D00C1F0D3 /* LoginViewController.swift */,
+				7A010B0D2693509500C1F0D3 /* SignUpViewController.swift */,
+				7AF490012694997700B33C40 /* AddrSearch */,
+			);
+			path = "Login,SignUp";
+			sourceTree = "<group>";
+		};
+		7AF490012694997700B33C40 /* AddrSearch */ = {
+			isa = PBXGroup;
+			children = (
+				7AF48FFF269498B200B33C40 /* AddressSearchViewController.swift */,
+				7AF49002269499D000B33C40 /* AddressTableViewCell.swift */,
+				7AE0359026956E6400ED9B2E /* AddrItem.swift */,
+				7AE0358A2695651B00ED9B2E /* APIService.swift */,
+				7AE0358C2695677A00ED9B2E /* JusoStore.swift */,
+				7AE0358E26956D8600ED9B2E /* ViewJuso.swift */,
+				7AF490042694A02400B33C40 /* AddressViewModel.swift */,
+			);
+			path = AddrSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A010B0426934C9D00C1F0D3 /* Build configuration list for PBXNativeTarget "StarPos" */;
 			buildPhases = (
+				47395CD66096A022AD6B47A8 /* [CP] Check Pods Manifest.lock */,
 				7A010AD626934C9D00C1F0D3 /* Sources */,
 				7A010AD726934C9D00C1F0D3 /* Frameworks */,
 				7A010AD826934C9D00C1F0D3 /* Resources */,
+				607AA7B72E00581C5CE5EA4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A010B0726934C9D00C1F0D3 /* Build configuration list for PBXNativeTarget "StarPosTests" */;
 			buildPhases = (
+				84F95D05D004D055E4FA020C /* [CP] Check Pods Manifest.lock */,
 				7A010AEC26934C9D00C1F0D3 /* Sources */,
 				7A010AED26934C9D00C1F0D3 /* Frameworks */,
 				7A010AEE26934C9D00C1F0D3 /* Resources */,
@@ -173,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A010B0A26934C9D00C1F0D3 /* Build configuration list for PBXNativeTarget "StarPosUITests" */;
 			buildPhases = (
+				DAE266261832D062BF7816D6 /* [CP] Check Pods Manifest.lock */,
 				7A010AF726934C9D00C1F0D3 /* Sources */,
 				7A010AF826934C9D00C1F0D3 /* Frameworks */,
 				7A010AF926934C9D00C1F0D3 /* Resources */,
+				EEAF34E148AB220A2FD78714 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A010AEA26934C9D00C1F0D3 /* LaunchScreen.storyboard in Resources */,
+				7A010B11269358DC00C1F0D3 /* GoogleService-Info.plist in Resources */,
 				7A010AE726934C9D00C1F0D3 /* Assets.xcassets in Resources */,
 				7A010AE526934C9D00C1F0D3 /* Main.storyboard in Resources */,
 			);
@@ -256,14 +342,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47395CD66096A022AD6B47A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarPos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		607AA7B72E00581C5CE5EA4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarPos/Pods-StarPos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarPos/Pods-StarPos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarPos/Pods-StarPos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84F95D05D004D055E4FA020C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarPosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE266261832D062BF7816D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarPos-StarPosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEAF34E148AB220A2FD78714 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarPos-StarPosUITests/Pods-StarPos-StarPosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarPos-StarPosUITests/Pods-StarPos-StarPosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarPos-StarPosUITests/Pods-StarPos-StarPosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A010AD626934C9D00C1F0D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF490052694A02400B33C40 /* AddressViewModel.swift in Sources */,
+				7AE0358D2695677A00ED9B2E /* JusoStore.swift in Sources */,
+				7AF49003269499D000B33C40 /* AddressTableViewCell.swift in Sources */,
+				7AE0358F26956D8600ED9B2E /* ViewJuso.swift in Sources */,
+				7AE0359126956E6400ED9B2E /* AddrItem.swift in Sources */,
 				7A010AE226934C9D00C1F0D3 /* LoginViewController.swift in Sources */,
 				7A010ADE26934C9D00C1F0D3 /* AppDelegate.swift in Sources */,
 				7A010B0E2693509500C1F0D3 /* SignUpViewController.swift in Sources */,
+				7AF49000269498B200B33C40 /* AddressSearchViewController.swift in Sources */,
+				7AE0358B2695651B00ED9B2E /* APIService.swift in Sources */,
 				7A010AE026934C9D00C1F0D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +633,7 @@
 		};
 		7A010B0526934C9D00C1F0D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CE19F694E69B07CDB93623 /* Pods-StarPos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,12 +648,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = beobmun.StarPos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		7A010B0626934C9D00C1F0D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFAFBAF29E4E58629FB53F3 /* Pods-StarPos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,12 +669,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = beobmun.StarPos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 		7A010B0826934C9D00C1F0D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE908019D3DA12E3F2D50F3 /* Pods-StarPosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -499,6 +698,7 @@
 		};
 		7A010B0926934C9D00C1F0D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1447B81BE566729ED6A9B9B /* Pods-StarPosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +721,7 @@
 		};
 		7A010B0B26934C9D00C1F0D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB78DDFFEB646B1D2CA57741 /* Pods-StarPos-StarPosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +742,7 @@
 		};
 		7A010B0C26934C9D00C1F0D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF9C8AAE06EB4316EF4F6D1 /* Pods-StarPos-StarPosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
