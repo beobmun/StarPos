@@ -14,6 +14,7 @@ enum AddressAPI {
     static let baseUrl: String = "https://www.juso.go.kr/addrlink/addrLinkApi.do"
     static let confmKey: String = "U01TX0FVVEgyMDIxMDcwNjIzMDk1NTExMTM2ODc="
     static var keyword: String?
+    static var countPerPage: Int = 10
 //    static var keyword: String = "그린시티"
 }
 
@@ -26,7 +27,7 @@ class APIService {
         
         var param: [String: Any] = [
             "confmKey": AddressAPI.confmKey,
-            "countPerPage": 10,
+            "countPerPage": AddressAPI.countPerPage,
             "keyword": keyword,
             "resultType": "json"
         ]

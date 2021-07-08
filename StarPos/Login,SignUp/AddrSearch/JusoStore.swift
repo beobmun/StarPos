@@ -24,7 +24,6 @@ class JusoStore: JusoFetchable {
                 guard let response = try? JSONDecoder().decode(AddrItem.self, from: data) else {
                     throw NSError(domain: "Decoding error", code: -1, userInfo: nil)
                 }
-                print(response)
                 return response
             }
     }

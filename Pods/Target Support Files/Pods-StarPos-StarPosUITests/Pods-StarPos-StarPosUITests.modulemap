@@ -1,0 +1,6 @@
+framework module Pods_StarPos_StarPosUITests {
+  umbrella header "Pods-StarPos-StarPosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -411,9 +411,6 @@
                                             <constraint firstAttribute="width" constant="50" id="zT8-Dl-KN3"/>
                                         </constraints>
                                         <state key="normal" title="검색"/>
-                                        <connections>
-                                            <action selector="searchBtnClicked:" destination="Z8a-o0-8M1" eventType="touchUpInside" id="Yz6-D3-bbw"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -432,6 +429,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-J1-aBX">
                                 <rect key="frame" x="0.0" y="158.5" width="704" height="825.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tpp-WO-Qx8">
+                                    <rect key="frame" x="0.0" y="154.00000034679067" width="704" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="더보기"/>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddressTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressTableViewCell" rowHeight="105" id="H9l-vY-NsG" customClass="AddressTableViewCell" customModule="StarPos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="704" height="105"/>
@@ -550,6 +552,7 @@
                     </view>
                     <connections>
                         <outlet property="keywordSearchBar" destination="CE7-4M-UT4" id="kKm-tN-1uh"/>
+                        <outlet property="moreBtn" destination="tpp-WO-Qx8" id="MrY-3T-mpk"/>
                         <outlet property="searchBtn" destination="HTu-cg-pgq" id="TLx-gt-Bha"/>
                         <outlet property="searchResultCountLabel" destination="qjT-jX-pjJ" id="Sbh-uS-gqH"/>
                         <outlet property="tableView" destination="HkB-J1-aBX" id="6tx-lR-bPl"/>

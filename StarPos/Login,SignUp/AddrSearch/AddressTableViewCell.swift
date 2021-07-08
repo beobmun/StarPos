@@ -34,9 +34,13 @@ class AddressTableViewCell: UITableViewCell {
     }
     
     
+    
+    
     @IBOutlet weak var zipNoLabel: UILabel!
     @IBOutlet weak var roadAddrLabel: UILabel!
     @IBOutlet weak var jibunAddrLabel: UILabel!
+    
+    
 }
 
 

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 
 class SignUpViewController: UIViewController {
@@ -22,9 +24,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var paymentTypeTextField: UITextField!
     
     
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         textFieldConfig()
         

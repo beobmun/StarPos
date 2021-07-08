@@ -14,7 +14,9 @@ import Alamofire
 
 class AddressSearchViewController: UIViewController {
     let viewModel: AddressViewModelType
+    let addressViewModel = AddressViewModel()
     var disposeBag = DisposeBag()
+    
     
     init(viewModel: AddressViewModelType = AddressViewModel()) {
         self.viewModel = viewModel
@@ -33,16 +35,15 @@ class AddressSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchResultCountLabel: UILabel!
     @IBOutlet weak var searchBtn: UIButton!
-    
+    @IBOutlet weak var moreBtn: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.refreshControl = UIRefreshControl()
         setupBindings()
-
+        
     }
     
     func setupBindings() {
@@ -68,10 +69,33 @@ class AddressSearchViewController: UIViewController {
 
         
         searchBtn.rx.tap
-            .map { _ in () }
+            .map { [weak self] _ in
+                guard let keywordText = self?.keywordSearchBar.text else { return }
+                self?.addressViewModel.sendKeyword(keywordText)
+            }
             .bind(to: viewModel.fetchAddrs)
             .disposed(by: disposeBag)
-
+        
+        moreBtn.rx.tap
+            .map { [weak self] _ in
+                self?.addressViewModel.moreResults()
+            }
+            .bind(to: viewModel.fetchAddrs)
+            .disposed(by: disposeBag)
+        
+        
+        // 셀 선택시
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                let cell = self?.tableView.dequeueReusableCell(withIdentifier: (self?.cellId)!, for: indexPath) as? AddressTableViewCell
+                self?.viewModel.allAddrs
+                    .subscribe(onNext: { print($0[indexPath.row])}) // 선택시 나오는 것
+                self?.dismiss(animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
+        
+        
+        
         viewModel.allAddrs
             .bind(to: tableView.rx.items(cellIdentifier: AddressTableViewCell.identifier, cellType: AddressTableViewCell.self)) {
                 _, item, cell in
@@ -83,81 +107,19 @@ class AddressSearchViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] info in
                 self?.searchResultCountLabel.text = "주소 검색 결과 : \(info.totalCount) 건"
+                if let totalcount = Int(info.totalCount), totalcount < AddressAPI.countPerPage {
+                    self?.moreBtn.isHidden = true
+                } else {
+                    self?.moreBtn.isHidden = false
+                }
             })
             .disposed(by: disposeBag)
     }
     
-    func sendKeyword(_ keyword: String) -> Observable<String> {
-        
-        return Observable.just(keyword)
-    }
     
-    @IBAction func searchBtnClicked(_ sender: UIButton) {
-        
-        guard let kw = keywordSearchBar.text else { return }
-        let observable = sendKeyword(kw)
-            .subscribe(onNext: { AddressAPI.keyword = $0 })
-            .disposed(by: disposeBag)
-
-
-
-//        var param: [String: Any] = [
-//            "confmKey": AddressAPI.confmKey,
-//            "countPerPage": 10,
-//            "keyword": "그린시티",
-//            "resultType": "json"
-//        ]
-//
-//        AF.request(AddressAPI.baseUrl, method: .get, parameters: param).validate().responseJSON { (response) in
-//            guard let data = response.data else { return }
-//            switch response.result {
-//                case .failure(let err):
-//                    //onComplete(.failure(err))
-//                    print("fail")
-//                    return
-//                case .success(let obj):
-//                    do {
-//                        let dataJson = try JSONSerialization.data(withJSONObject: obj, options: .prettyPrinted)
-//                        let getInstanceData = try JSONDecoder().decode(AddrResult.self, from: dataJson)
-//                        self.searchResultCountLabel.text = "주소 검색 결과 : \(getInstanceData.results.common.totalCount)건"
-//                        getInstanceData.results.juso.forEach { item in
-//                            print("지번: \(item.jibunAddr)")
-//                        }
-////                        print("juso : \(getInstanceData.results.juso.enumerated().forEach({ (index, item) in }))")
-//
-//                    } catch {
-//                        print("Err: \(error)")
-//                    }
-//
-//            }
-//        }
-    }
     
-
+    
 }
 
-struct AddrResult: Codable {
-    var results: Results
-
-    struct Results: Codable {
-        var common: Common
-        var  juso: [JusoInfo]
-        
-        struct Common: Codable {
-            var totalCount: String
-            var currentPage: String
-            var countPerPage: String
-            var errorCode: String
-            var errorMessage: String
-        }
-        
-        struct JusoInfo: Codable {
-            
-            var zipNo: String
-            var roadAddr: String
-            var jibunAddr: String
-        }
-    }
-}
 
 
