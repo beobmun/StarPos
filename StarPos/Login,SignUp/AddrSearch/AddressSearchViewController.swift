@@ -44,8 +44,10 @@ class AddressSearchViewController: UIViewController {
         tableView.refreshControl = UIRefreshControl()
         setupBindings()
         
+
     }
     
+
     func setupBindings() {
         
         let firstLoad = rx.viewWillAppear
@@ -67,11 +69,21 @@ class AddressSearchViewController: UIViewController {
                 }
             })
 
+        keywordSearchBar.rx.searchButtonClicked
+            .map { [weak self] _ in
+                guard let keywordText = self?.keywordSearchBar.text else { return }
+                self?.addressViewModel.sendKeyword(keywordText)
+                self?.keywordSearchBar.endEditing(true)
+            }
+            .bind(to: viewModel.fetchAddrs)
+            .disposed(by: disposeBag)
+
         
         searchBtn.rx.tap
             .map { [weak self] _ in
                 guard let keywordText = self?.keywordSearchBar.text else { return }
                 self?.addressViewModel.sendKeyword(keywordText)
+                self?.keywordSearchBar.endEditing(true)
             }
             .bind(to: viewModel.fetchAddrs)
             .disposed(by: disposeBag)
@@ -89,8 +101,15 @@ class AddressSearchViewController: UIViewController {
             .subscribe(onNext: { [weak self] indexPath in
                 let cell = self?.tableView.dequeueReusableCell(withIdentifier: (self?.cellId)!, for: indexPath) as? AddressTableViewCell
                 self?.viewModel.allAddrs
-                    .subscribe(onNext: { print($0[indexPath.row])}) // 선택시 나오는 것
+                    .subscribe(onNext: {
+//                                let signUpViewModel = SignUpViewModel($0[indexPath.row])
+//                                let signUpVC = SignUpViewController()
+//                                signUpVC.viewModel = signUpViewModel
+                                SignUpViewModel.address = $0[indexPath.row]
+                                print($0[indexPath.row])}) // 선택시 나오는 것
+                self?.navigationController?.popViewController(animated: true)
                 self?.dismiss(animated: true, completion: nil)
+                print(SignUpViewModel.address)
             })
             .disposed(by: disposeBag)
         

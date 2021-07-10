@@ -203,9 +203,9 @@
             -> Disposable where Source.Element == Adapter.Element {
                 return { source in
                     let delegateSubscription = self.setDelegate(adapter)
-                    let dataSourceSubscription = source.subscribeProxyDataSource(ofObject: self.base, dataSource: adapter, retainDataSource: true, binding: { [weak pickerView = self.base] (_: RxPickerViewDataSourceProxy, event) in
-                        guard let pickerView = pickerView else { return }
-                        adapter.pickerView(pickerView, observedEvent: event)
+                    let dataSourceSubscription = source.subscribeProxyDataSource(ofObject: self.base, dataSource: adapter, retainDataSource: true, binding: { [weak industryPickerView = self.base] (_: RxPickerViewDataSourceProxy, event) in
+                        guard let industryPickerView = industryPickerView else { return }
+                        adapter.pickerView(industryPickerView, observedEvent: event)
                     })
                     return Disposables.create(delegateSubscription, dataSourceSubscription)
                 }

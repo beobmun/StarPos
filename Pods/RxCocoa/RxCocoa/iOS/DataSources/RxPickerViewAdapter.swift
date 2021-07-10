@@ -21,11 +21,11 @@ class RxPickerViewArrayDataSource<T>: NSObject, UIPickerViewDataSource, Sectione
         return items[indexPath.row]
     }
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in industryPickerView: UIPickerView) -> Int {
         1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ industryPickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         items.count
     }
 }
@@ -35,10 +35,10 @@ class RxPickerViewSequenceDataSource<Sequence: Swift.Sequence>
     , RxPickerViewDataSourceType {
     typealias Element = Sequence
 
-    func pickerView(_ pickerView: UIPickerView, observedEvent: Event<Sequence>) {
+    func pickerView(_ industryPickerView: UIPickerView, observedEvent: Event<Sequence>) {
         Binder(self) { dataSource, items in
             dataSource.items = items
-            pickerView.reloadAllComponents()
+            industryPickerView.reloadAllComponents()
         }
         .on(observedEvent.map(Array.init))
     }
@@ -56,7 +56,7 @@ final class RxStringPickerViewAdapter<Sequence: Swift.Sequence>
         super.init()
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ industryPickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         titleForRow(row, items[row])
     }
 }
@@ -70,7 +70,7 @@ final class RxAttributedStringPickerViewAdapter<Sequence: Swift.Sequence>: RxPic
         super.init()
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    func pickerView(_ industryPickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         attributedTitleForRow(row, items[row])
     }
 }
@@ -84,7 +84,7 @@ final class RxPickerViewAdapter<Sequence: Swift.Sequence>: RxPickerViewSequenceD
         super.init()
     }
     
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    func pickerView(_ industryPickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         viewForRow(row, items[row], view)
     }
 }

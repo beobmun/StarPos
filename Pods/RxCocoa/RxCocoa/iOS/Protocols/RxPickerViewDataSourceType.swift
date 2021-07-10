@@ -20,7 +20,7 @@ public protocol RxPickerViewDataSourceType {
     ///
     /// - parameter pickerView: Bound picker view.
     /// - parameter observedEvent: Event
-    func pickerView(_ pickerView: UIPickerView, observedEvent: Event<Element>)
+    func pickerView(_ industryPickerView: UIPickerView, observedEvent: Event<Element>)
 }
     
 #endif
