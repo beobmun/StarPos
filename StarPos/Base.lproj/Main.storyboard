@@ -404,7 +404,6 @@
                         <outlet property="addressTextField" destination="0Em-Kr-qv8" id="xch-C5-kFg"/>
                         <outlet property="businessNumTextField" destination="oPg-Ga-OkT" id="RlI-KG-faU"/>
                         <outlet property="detailAddTextField" destination="vTG-6W-5tt" id="Ogh-WR-6YD"/>
-                        <outlet property="detailAddrStackView" destination="Fgh-6s-VDe" id="hRe-TA-XU6"/>
                         <outlet property="idTextField" destination="43F-0G-oLP" id="CaT-5K-TmR"/>
                         <outlet property="industryTextField" destination="M3K-I3-fSn" id="Doh-Sd-bQD"/>
                         <outlet property="paymentTypeTextField" destination="iTI-c0-b3l" id="vuT-BO-se9"/>
@@ -414,7 +413,6 @@
                         <outlet property="pwTextField2" destination="lWM-ZL-Zk6" id="NSo-uO-2OQ"/>
                         <outlet property="scrollView" destination="9Wl-dl-HHb" id="Tjv-UT-KYS"/>
                         <outlet property="signUpBtn" destination="CHk-Ut-xCg" id="mpU-x3-iY0"/>
-                        <outlet property="storeInfoStackView" destination="WWV-4w-S8b" id="q4r-6a-5gY"/>
                         <outlet property="storeNameTextField" destination="1q1-OP-hST" id="Soq-Yv-2nW"/>
                         <outlet property="zipNoTextField" destination="qC7-3W-2Pg" id="Y6a-Os-F5G"/>
                     </connections>
@@ -422,6 +420,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCx-Fe-602" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713.76281112737911" y="772.8515625"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="DUH-fX-sIo">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="1NQ-cZ-Z9b" customClass="HomeViewController" customModule="StarPos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t06-eC-y1T">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 성공 홈뷰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-ie-EHL">
+                                <rect key="frame" x="627" y="501.5" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ohs-Ro-TBa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GTe-ie-EHL" firstAttribute="centerY" secondItem="t06-eC-y1T" secondAttribute="centerY" id="f8f-tf-dp7"/>
+                            <constraint firstItem="GTe-ie-EHL" firstAttribute="centerX" secondItem="t06-eC-y1T" secondAttribute="centerX" id="k0P-6q-SkT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buV-AN-wqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="1535"/>
         </scene>
         <!--Address Search View Controller-->
         <scene sceneID="Xm7-qM-jkp">

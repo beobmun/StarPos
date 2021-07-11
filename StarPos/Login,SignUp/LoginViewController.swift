@@ -62,9 +62,16 @@ class LoginViewController: UIViewController {
         print("LoginViewModel - loginBtnClicked()")
         
         Auth.auth().signIn(withEmail: id, password: pw) { [weak self] authResult, error in
-            guard let strongSelf = self, error == nil else {
+            if error == nil {
+                let pushVC = self?.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+                self?.navigationController?.pushViewController(pushVC!, animated: true)
+            } else {
                 if let errorCode = AuthErrorCode(rawValue: (error?._code) as! Int) {
                     switch errorCode {
+                    case AuthErrorCode.networkError:
+                        self?.showAlert("로그인 오류", "네크워크 오류가 발생했습니다.")
+                    case AuthErrorCode.userNotFound:
+                        self?.showAlert("로그인 오류", "사용자 계정을 찾을 수 없습니다.")
                     case AuthErrorCode.invalidEmail:
                         self?.showAlert("로그인 오류", "잘못된 이메일 형식입니다.")
                     case AuthErrorCode.userDisabled:
@@ -75,10 +82,7 @@ class LoginViewController: UIViewController {
                         self?.showAlert("로그인 오류", "로그인 과정 중 오류가 발생했습니다. \n 아이디, 비밀번호를 다시 확인해주세요.")
                     }
                 }
-                return
             }
-            
-            
         }
         
     }

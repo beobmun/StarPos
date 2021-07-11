@@ -9,6 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxViewController
+import FirebaseAuth
 
 
 class SignUpViewController: UIViewController {
@@ -27,8 +28,6 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var pwNotifyLabel: UILabel!
     @IBOutlet weak var signUpBtn: UIButton!
-    @IBOutlet weak var storeInfoStackView: UIStackView!
-    @IBOutlet weak var detailAddrStackView: UIStackView!
     
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -165,15 +164,49 @@ class SignUpViewController: UIViewController {
                     .subscribe(onNext: {
                         switch $0 {
                         case "정상":
-                            print("정상")
+                            self?.signUp(email: self!.idTextField, pw: self!.pwTextField1)
+                            
                         default:
                             self?.showAlert("회원가입 오류", $0)
-                            print($0)
                         }
-                        
                     })
+                    .disposed(by: self!.disposeBag)
+
             })
             .disposed(by: disposeBag)
+        
+
+    }
+    
+    
+    func signUp(email: UITextField, pw: UITextField) {
+        
+        Auth.auth().createUser(withEmail: email.text!, password: pw.text!) { [weak self] authResult, error in
+            
+            if error == nil {
+                let alert = UIAlertController(title: "회원가입 성공", message: "회원가입을 완료하였습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { action in
+                    self?.signUpViewModel.login(email: self!.idTextField, pw: self!.pwTextField1, storeName: self!.storeNameTextField, zipNo: self!.zipNoTextField, address: self!.addressTextField, detailAddr: self!.detailAddTextField, businessNum: self!.businessNumTextField, phoneNum: self!.phoneNumTextField, industry: self!.industryTextField, payment: self!.paymentTypeTextField)
+                    let pushVC = self?.storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+                    self?.navigationController?.pushViewController(pushVC!, animated: true)
+                }))
+                self?.present(alert, animated: true, completion: nil)
+            } else {
+                if let errorCode = AuthErrorCode(rawValue: (error!._code)) {
+                    switch errorCode {
+                    case AuthErrorCode.invalidEmail:
+                        self?.showAlert("회원가입 오류", "잘못된 이메일 형식입니다.")
+                    case AuthErrorCode.emailAlreadyInUse:
+                        self?.showAlert("회원가입 오류", "이미 존재하는 이메일 입니다.")
+                    case AuthErrorCode.weakPassword:
+                        self?.showAlert("회원가입 오류", "비밀번호의 안정성이 너무 낮습니다.")
+                    default:
+                        self?.showAlert("회원가입 오류", "회원가입 과정에서 오류가 발생했습니다. \n 아이디/비밀번호를 다시 설정해주세요.")
+                    }
+                }
+            }
+        }
+        
     }
     
     
